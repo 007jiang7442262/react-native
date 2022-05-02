@@ -172,15 +172,13 @@ android {
                 }
             }
         }
-        /* https://github.com/winniexi/jmessage-react-plugin */
         /* https://blog.csdn.net/Bombas/article/details/123654883 */
         manifestPlaceholders = [
                   JPUSH_APPKEY:"0a8a3a73030c8f359246d6f2",         //在此替换你的APPKey
                   JPUSH_CHANNEL: "1715a13983d5d77d57b2d1a0",        //在此替换你的channel
-                 // APP_CHANNEL: "developer-default",  //应用渠道号
+                 // APP_CHANNEL: "developer-default",  //应用渠道号   jmessage-react-plugin 用的
         ]
         /* https://blog.csdn.net/Bombas/article/details/123654883 */
-        /* https://github.com/winniexi/jmessage-react-plugin */
 
     }
 

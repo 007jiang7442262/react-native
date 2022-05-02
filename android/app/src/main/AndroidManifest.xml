@@ -43,12 +43,10 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
-      <!-- https://github.com/winniexi/jmessage-react-plugin -->
       <!-- https://blog.csdn.net/Bombas/article/details/123654883 -->
       <meta-data android:name="JPUSH_CHANNEL" android:value="1715a13983d5d77d57b2d1a0" />
       <meta-data android:name="JPUSH_APPKEY" android:value="0a8a3a73030c8f359246d6f2" />
       <!-- https://blog.csdn.net/Bombas/article/details/123654883 -->
-      <!-- https://github.com/winniexi/jmessage-react-plugin -->
 
       
     </application>
