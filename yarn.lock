@@ -4944,7 +4944,7 @@
     "html-escaper" "^2.0.0"
     "istanbul-lib-report" "^3.0.0"
 
-"jcore-react-native@>= 1.9.3":
+"jcore-react-native@^2.0.2", "jcore-react-native@>= 1.9.3":
   "integrity" "sha512-s7s7E/H1+hvKU4ieBudd/TKT0dnmG39TAtDSobE7wTEo6/gFBTre7HJUR45/xi+cy0Mp3Kip1wCXeVJc+YZtsA=="
   "resolved" "https://registry.npmjs.org/jcore-react-native/-/jcore-react-native-2.0.2.tgz"
   "version" "2.0.2"
