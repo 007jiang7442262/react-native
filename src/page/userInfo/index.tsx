@@ -188,6 +188,7 @@ const Index = () => {
 
   return (
     <View style={styles.setTop}>
+      
       <View style={styles.svgAll}>
         <View style={styles.svgBox}>
           <TouchableOpacity onPress={() => { setSelectType(1) }} style={{ ...styles.svgMige, ...styles.setMargin, ...styleObjNan }} ><SvgXml xml={nv} width={50} height={70} /></TouchableOpacity>

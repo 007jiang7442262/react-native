@@ -122,7 +122,10 @@ export default function App() {
 //https://oblador.github.io/react-native-vector-icons/
 // npm i react-native-vector-icons -D
 // npx react-native link react-native-vector-icons 应该不用这个
-//在react-native.config.js 里面添加代码
+//在安卓里面可以直接用在而ios的话根据下面的来
+//在react-native.config.js里面添加代码 和https://www.jianshu.com/p/65c6e7bc15a5
+//注意不管是react-native-vector-icons里面的图标还是阿里里面的图标都加入到ios项目里面去
+// <Text style={{fontFamily: 'iconfont', color: 'red'}}>{`\ue64b`}</Text>  &#xe64c; 要不转成\ue64b
 
 //2
 //https://github.com/jhen0409/react-native-debugger/releases  下载react-native-debugge  用于debugger

@@ -9,6 +9,7 @@ import UserInfo from '../page/userInfo';
 import Test from '../page/test'
 import Geolocations from '../page/geolocations'
 import TestJpush from '../page/testJpush';
+import BottomSheetTest from '../page/bottomSheetTest';
 
 const styles = StyleSheet.create({
   header: {
@@ -64,7 +65,7 @@ function Nav() {
             //)
           };
         }}
-        initialRouteName="TestJpush"
+        initialRouteName="BottomSheetTest"
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="CodeScrollView" component={CodeScrollView} />
@@ -74,6 +75,7 @@ function Nav() {
         <Stack.Screen name="Test" component={Test} />
         <Stack.Screen name="Geolocations" component={Geolocations} />
         <Stack.Screen name="TestJpush" component={TestJpush} />
+        <Stack.Screen name="BottomSheetTest" component={BottomSheetTest} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -82,3 +84,8 @@ function Nav() {
 
 
 export default Nav;
+
+
+//react-native-tab-navigator 66集
+//react-native-image-header-scroll-view 68集 
+// 字体图片引入  https://blog.csdn.net/hzxOnlineOk/article/details/104650543?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.pc_relevant_default&spm=1001.2101.3001.4242.2&utm_relevant_index=4

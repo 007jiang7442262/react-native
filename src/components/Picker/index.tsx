@@ -63,6 +63,7 @@ export default class PickerTest extends Component<any, any> {
       <Modal transparent={true} animationType={'slide'} visible={this.props.showPicker} onRequestClose={() => { }}>
         <View style={{ flex: 1, justifyContent: 'flex-end', backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <CascadePicker
+            pickerDeep={2}
             value={this.state.value}
             dataSource={Pickers}
             cancel={this.cancel}

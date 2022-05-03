@@ -131,7 +131,7 @@ export default (props: any) => {
         <View style={styles.center}>
           <THButton onClick={time === 0 ? login : codeEnd} text={time === 0 ?`注册或登录` : `发送验证码 ${time ? `(${time}s)` : ''} `} />
         </View>
-
+        <Text style={{fontFamily: 'iconfont', color: 'red'}}>{`\ue64b`}</Text>
         <Text>{phone}</Text>
         <Text>{serverData}</Text>
       </View>
