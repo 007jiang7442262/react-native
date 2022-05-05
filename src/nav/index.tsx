@@ -89,3 +89,4 @@ export default Nav;
 //react-native-tab-navigator 66集
 //react-native-image-header-scroll-view 68集 
 // 字体图片引入  https://blog.csdn.net/hzxOnlineOk/article/details/104650543?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.pc_relevant_default&spm=1001.2101.3001.4242.2&utm_relevant_index=4
+//react-native-deck-swiper 可以左右滑动

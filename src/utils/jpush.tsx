@@ -41,7 +41,7 @@ const mobileNumberListener = result => {
 };
 JPush.addMobileNumberListener(mobileNumberListener);
 
-
+// RegistrationID 得到这个id可以精确到每一个人的推送   https://blog.csdn.net/maguanghui_2012/article/details/79916908?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_antiscanv2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_antiscanv2&utm_relevant_index=2
 JPush.getRegistrationID((registerID) => {
   console.log('registerID : ', registerID);
 })
