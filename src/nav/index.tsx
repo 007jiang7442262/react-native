@@ -65,7 +65,7 @@ function Nav() {
             //)
           };
         }}
-        initialRouteName="BottomSheetTest"
+        initialRouteName="userInfo"
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="CodeScrollView" component={CodeScrollView} />

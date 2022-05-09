@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity, Image } from 'react-native';
+import { Text, View, StyleSheet, TextInput, TouchableOpacity, Image, Platform } from 'react-native';
 import { pxToDp } from '../../utils/styleTransition';
 import { SvgUri, SvgXml } from 'react-native-svg';
 import { nv, nan } from '../../utils/svg'
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 
 
 
-const IP = 'http://192.168.100.102:7001'
+const IP = 'http://192.168.100.105:7001'
 
 
 
@@ -130,46 +130,57 @@ const Index = () => {
       width: 300,
       height: 400,
       //cropping: true,
-      includeBase64: true
-    }).then((image: any) => {
+      //includeBase64: true
+    })
+    .then((image: any) => {
 
+      /* 
+      这是用base64
       const temps = axios.create({
         baseURL: IP,
         timeout: 6000,
         headers: {
-          //'Content-Type': "multipart/form-data; boundary=something",
-          //"content-type": "application/x-www-form-urlencoded" 
-          "Content-Type": 'application/json;charset=utf8'
-
+          'Content-Type': "multipart/form-data; boundary=something",
+          'Accept': 'application/json',
         }
-      })
-      const fileName = image.path.split('/').pop();
+      }) 
+       const fileName = image.path.split('/').pop();
       temps.post('/base64Img', { base64_URL: `data:${image.mime};base64,${image.data}`, filename: fileName })
         .then(res => {
           Toast.success('图片上传成功', 3000)
           setBase64(`${IP}/public/img/${fileName}`)
         }
         )
+        .catch(err => { console.log('err =', err); Toast.fail('图片上传失败', 3000) }) 
+      */
+
+
+
+      const formData = new FormData();
+      const file: any = {
+        uri: image.path, // 本地文件路径
+        type: image.mime,
+        name: image.path.split('/').pop(), // 图片名称
+      };
+      // console.log('files', file)
+
+      formData.append('files', file);
+
+      const header = {
+        'Accept': 'application/json',
+        'content-type': 'multipart/form-data',
+      }
+      
+        fetch(`${IP}/testImt`, {
+            method: 'POST',
+            headers: header,
+            body:formData,
+        })
+        .then(res => {
+          Toast.success('图片上传成功', 4000);
+        })
         .catch(err => { console.log('err =', err); Toast.fail('图片上传失败', 3000) })
 
-      /* 
-            const formData = new FormData();
-            const file:any = {
-              uri: image.path, // 本地文件路径
-              type: image.mime,
-              name: image.path.split('/').pop(), // 图片名称
-            };
-            console.log('file', file)
-            formData.append('file', file);
-      
-      
-            temps.post('/uploadImg', formData)
-              .then(res => {
-                Toast.success('图片上传成功', 4000);
-                console.log('姜超111', res)
-              })
-              .catch(err => { console.log('err =', err); Toast.fail('图片上传失败', 3000) }) 
-        */
 
     });
   }
@@ -188,7 +199,7 @@ const Index = () => {
 
   return (
     <View style={styles.setTop}>
-      
+
       <View style={styles.svgAll}>
         <View style={styles.svgBox}>
           <TouchableOpacity onPress={() => { setSelectType(1) }} style={{ ...styles.svgMige, ...styles.setMargin, ...styleObjNan }} ><SvgXml xml={nv} width={50} height={70} /></TouchableOpacity>
